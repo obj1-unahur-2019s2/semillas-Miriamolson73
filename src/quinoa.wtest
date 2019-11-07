@@ -1,0 +1,19 @@
+import semillas.*
+
+describe "Quinoa" {
+	//si tenemos una quinoa que tolera 12 horas de sol y su semilla de origen es de 2010, se trata de una planta que da semillas.
+// si tenemos una planta que tolere 9 horas de sol pero cuya semilla de origen es de 2001, también da semillas.
+
+
+	var quinoa1 = new Quinoa(cuantasHorasDeSolTolera=12, anio = 2010, altura=1)
+	var quinoa2 = new Quinoa(cuantasHorasDeSolTolera=9, anio = 2001, altura=2)
+	
+
+	test "uno" {
+		assert.that(quinoa1.daNuevaSemillas())
+		assert.that(quinoa2.daNuevaSemillas())
+	
+	}
+
+}
+

@@ -1,0 +1,16 @@
+import semillas.*
+
+describe "Soja" {
+//Por ejemplo, si tuviesemos una soja de 0.6 metros y de semilla de 2009, la planta tendría una tolerancia al sol de 7 horas, no daría semillas y ocuparía 0.3 metros cuadrados.*/
+
+	var soja = new Soja(altura =0.6, anio = 2009)
+	
+
+	test "uno" {
+		assert.notThat(soja.daNuevaSemillas())
+		assert.equals(0.3, soja.espacioQueOcupa())
+		
+		assert.equals(7, soja.cuantasHorasDeSolTolera())
+	}
+
+}

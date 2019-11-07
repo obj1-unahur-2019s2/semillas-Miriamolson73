@@ -1,0 +1,18 @@
+import semillas.*
+
+describe "Mentas" {
+
+///	una menta de 1 metro, debería dar semillas y ocupar un espacio de 3 metros cuadrados.
+//* una menta de solo 0.3 metros, no debería dar semillas y ocuparía 0.9 metros cuadrados de espacio.*/
+	var menta1 = new Menta(altura = 1, anio = 2019)
+	var menta2 = new Menta(altura = 0.3, anio = 2020)
+
+	test "uno" {
+		assert.that(menta1.daNuevaSemillas())
+		assert.equals(3, menta1.espacioQueOcupa())
+		assert.notThat(menta2.daNuevaSemillas())
+		assert.equals(0.9, menta2.espacioQueOcupa())
+	}
+
+}
+
