@@ -1,4 +1,5 @@
 import semillas.*
+import parcelas.*
 
 describe "Mentas" {
 
